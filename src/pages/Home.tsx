@@ -11,7 +11,7 @@ function Home() {
 
     let [users, setUsers] = useState<User[]>([]);
 
-    const userClicked = (userId) => {
+    const userClicked = (userId: number) => {
         console.log('user clicked', userId)
     }
 

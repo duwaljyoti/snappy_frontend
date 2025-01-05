@@ -10,7 +10,7 @@ type LayoutProps = {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
     return (
-        <Container fluid className="layout">
+        <Container fluid className={styles.layout}>
             <Header></Header>
             <div className="d-flex">
                 <Sidebar></Sidebar>
