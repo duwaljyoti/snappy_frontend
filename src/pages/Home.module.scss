@@ -1,0 +1,33 @@
+.textAlignLeft {
+  text-align: left;
+}
+
+.singleNewsTitle {
+  font-size: 1.3rem;
+  a {
+    color: unset !important;
+  }
+}
+
+.singleNewsListItem {
+  border-top: 1px solid #dee2e6 !important;
+}
+
+.imageDiv {
+  min-width: 25%;
+  display: flex;
+  justify-content: right;
+
+  img {
+    //width: 18rem;
+    border-radius: 0.4rem;
+    max-width: 100%;  /* Ensures image does not exceed its container */
+    height: auto;     /* Maintains aspect ratio */
+    display: block;
+    width: 14rem;
+  }
+}
+
+
+
+

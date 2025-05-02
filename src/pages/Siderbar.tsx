@@ -17,7 +17,7 @@ const Sidebar = () => {
                 <li
                     className={`${styles.navItem} ${currentlySelectedNav === '' ? styles.selectedNavItem : ''}`}
                     onClick={() => navigate('/')}>
-                    <span className={styles.navSingleMenu}>Home</span>
+                    <span className={styles.navSingleMenu}>Feed</span>
                 </li>
                 <li
                     className={`${styles.navItem} ${currentlySelectedNav === 'settings' ? styles.selectedNavItem : ''}`}

@@ -29,3 +29,15 @@ export const fetchUsersFromApi = async (): Promise<any> => {
     }
     return await response.json();
 };
+
+export const fetchNewsFromApi = async (): Promise<any> => {
+    const response: Response = await fetch(import.meta.env.VITE_API_URL + 'my-view/', {
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    });
+    if (!response.ok) {
+        throw new Error(`Failed to fetch users: ${response.statusText}`);
+    }
+    return await response.json();
+};

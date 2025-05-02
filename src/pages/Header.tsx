@@ -2,11 +2,18 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import styles from './Header.module.scss'
+import {useNavigate} from "react-router-dom";
 
 const Header = () => {
+    const navigate = useNavigate();
+
+    const logOutClicked = () => {
+        navigate('/login');
+    };
+
     return (
         <Navbar expand="lg" className={styles.mainNavBar}>
-            <Container>
+            <Container fluid>
                 <Navbar.Brand href="#home" className={styles.mainProjectName}>
                     Snappy
                 </Navbar.Brand>
@@ -28,6 +35,9 @@ const Header = () => {
                         {/*</NavDropdown>*/}
                     </Nav>
                 </Navbar.Collapse>
+                <Nav.Link href="#home" className={styles.mainProjectName} onClick={logOutClicked}>
+                    Logout
+                </Nav.Link>
             </Container>
         </Navbar>
     );

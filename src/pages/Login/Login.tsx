@@ -8,20 +8,26 @@ import React, { useState } from 'react';
 import {useNavigate} from "react-router-dom";
 
 function Login() {
+    console.log(import.meta.env.VITE_API_URL)
     const navigate = useNavigate();
     const [loginButtonTitle, setLoginButtonTitle] = useState('Login');
-    const [email, setEmail] = useState('duwaljyoti16@gmail.com');
-    const [password, setPassword] = useState('test');
+    const [email, setEmail] = useState('rootuser');
+    const [password, setPassword] = useState('1234');
 
     const handleLogin = async (event) => {
         setLoginButtonTitle('Please wait....');
         event.preventDefault();
 
-        const apiUrl = 'https://63ef222ec59531ccf16982c8.mockapi.io/api/v1/users';
-        // const payload = JSON.stringify({email, password});
+        const apiUrl = import.meta.env.VITE_API_URL + 'signin/';
         const apiResponse = await fetch(apiUrl, {
-            method: 'GET',
-            // body: payload,
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                username: email,
+                password: password,
+            }),
         })
 
         const apiResponseJson = await apiResponse.json();
