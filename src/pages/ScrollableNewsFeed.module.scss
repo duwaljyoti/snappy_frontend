@@ -1,9 +1,14 @@
 .container {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
+  /* constrain the height so the vertical swiper shows scroll */
+  height: 700px;
+  overflow: hidden;
 }
-.item {
-  scroll-snap-align: start;
-  height: 100vh;
+
+.swiper {
+  height: 100%;
+}
+
+.slide {
+  padding: 1rem;
+  /* your slide styling here */
 }
