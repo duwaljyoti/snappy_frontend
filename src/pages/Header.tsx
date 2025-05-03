@@ -15,7 +15,7 @@ const Header = () => {
         <Navbar expand="lg" className={styles.mainNavBar}>
             <Container fluid>
                 <Navbar.Brand href="#home" className={styles.mainProjectName}>
-                    Snappy
+                    React
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">

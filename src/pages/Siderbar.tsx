@@ -15,6 +15,11 @@ const Sidebar = () => {
         <div className={styles.sidebar}>
             <ul className="nav flex-column">
                 <li
+                    className={`${styles.navItem} ${currentlySelectedNav === 'settings' ? styles.selectedNavItem : ''}`}
+                    onClick={() => navigate('/news-feed')}>
+                    <span className={styles.navSingleMenu}>Scroll</span>
+                </li>
+                <li
                     className={`${styles.navItem} ${currentlySelectedNav === '' ? styles.selectedNavItem : ''}`}
                     onClick={() => navigate('/')}>
                     <span className={styles.navSingleMenu}>Feed</span>
